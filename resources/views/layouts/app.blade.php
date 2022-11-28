@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>@yield('title') - Login</title>
-    
-    <!-- Tailwind CSS Link -->
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
-  </head>
-
-  <body class="bg-gray-100 text-gray-800">
-    <nav class="flex py-5 bg-indigo-500 text-white">
-        <div class="w-1/2 px-12 mr-auto">
-            <p class="text-2x1 font-bold">GAP</p>
+    {{-- Styles --}}
+    <link href="{{ asset('css/css.css') }}" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="{{ asset('js/mtz.js') }}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>GAP</title>
+</head>
+    <body id="fondoApp">
+        <div id="app" class="col s12 m12 l12" >
+            <nav class="nav-extended">
+                <div class="nav-wrapper teal">
+                    <a href="#" class="brand-logo center"><img id="logo" src="{{asset("img/Gap_logo.png") }}" height="45" width="120"></a>
+                    <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        @if (auth()->check())
+                        <li class="disabled"> Bienvenido {{ auth()->user()->name }}</li>
+                        <li><a href="{{route("login.destroy")}}"><i class="material-icons right">exit_to_app</i>Salir</a></li>    
+                    </ul>
+                </div>
+                <div class="nav-wrapper teal lighten-1">
+                    <ul>
+                      <li class="tab"><a href="#agenda">Agenda</a></li>
+                      <li class="tab"><a href="#productos">Productos</a></li>
+                    </ul>
+                </div>
+                <ul class="sidenav" id="mobile-demo">
+                    
+                    <li class="tab"><a href="#agenda">Agenda</a></li>
+                    <li class="tab"><a href="#productos">Productos</a></li>
+                    <li><a href="{{route("login.destroy")}}">Salir</a></li>
+                </ul>
+                    @else
+                        <li><a href="{{ route('login.index') }}">Iniciar</a></li>
+                        <li><a href="{{ route('register.index') }}">Registro</a></li>
+                    </ul>
+                </div>
+                <ul class="sidenav" id="mobile-demo">
+                    <li><a href="{{route("login.destroy")}}">Salir</a></li>
+                </ul>                
+                    @endif    
+            </nav>
+            <main >
+                @yield('content')
+            </main>
         </div>
-        <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
-            @if (auth()->check())
-                <li class="mr-4">
-                    Bienvenido {{ auth()->user()->name }}
-                </li>
-                <li class="mr-4">
-                    <a href="{{ route('login.destroy') }}" class="font-semibold hover:bg-red-700 py-3 px-4 rounded-md">Log Out</a>
-                </li>
-            @else
-                <li>
-                    <a href="{{ route('login.index') }}" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md">Log In</a>
-                </li>
-                <li>
-                    <a href="{{ route('register.index') }}" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md">Registro</a>
-                </li>
-            @endif
-        </ul>
-    </nav>
-   
-    @yield('content')
-
-
-  </body>
+        <script src="{{ asset('js/mtz.js') }}" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
 </html>
