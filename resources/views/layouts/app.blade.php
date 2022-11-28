@@ -16,7 +16,7 @@
     <body id="fondoApp">
         <div id="app" class="col s12 m12 l12" >
             <nav class="nav-extended" >
-                <div class="nav-wrapper teal " id="nav">
+                <div class="nav-wrapper black" id="nav">
                     <a href="#" class="brand-logo center"><img id="logo" src="{{asset("img/Gap_logo.png") }}" height="45" width="120"></a>
                     <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     @if (auth()->check())                    
@@ -26,7 +26,7 @@
                     <a class="right">Bienvenido {{ auth()->user()->name }}</a>
                     
                 </div>
-                <div class="nav-wrapper teal lighten-1">
+                <div class="nav-wrapper black">
                     <ul>
                       <li class="tab"><a href="#agenda">Agenda</a></li>
                       <li class="tab"><a href="#productos">Productos</a></li>
@@ -60,7 +60,7 @@
         <script src="{{ asset('js/mtz.js') }}" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
-    <footer class="page-footer teal darken-2">
+    <footer class="page-footer teal darken-4">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">

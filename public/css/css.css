@@ -27,8 +27,8 @@
 }
 
 #logo {
-    width: 90px;
-    height: 35px;
+    width: 70px;
+    height: 50px;
     margin-top: 10px;
     margin-left: 10px;
 
@@ -41,7 +41,8 @@
 
 #nav{
 
-    background: radial-gradient(circle, rgb(70, 184, 167) 0%, rgb(57, 155, 140) 70%);
+    /* background: radial-gradient(circle, rgb(70, 184, 167) 0%, rgb(57, 155, 140) 70%); */
+    background-color: #000c0a;
 
 }
 
@@ -50,7 +51,7 @@ li {
 }
 
 li:hover{
-    background:rgb(9, 58, 59);
+    background:rgba(155, 149, 98, 0.589);
     
 }
 
@@ -81,13 +82,13 @@ span{
 #textDemo{
     text-shadow: 4px 3px 0 #07e0e0, -40px -23px 0px rgba(206,89,55,0);
     color: #ffffff;
-    background-color: #179282;
+    background-color: #000c0a;
     font-size: 50px;
     font-weight: bold;
 }
 
 #textDemo:hover{
-    background: rgb(5, 167, 145);
+    background: rgba(161, 148, 26, 0.671);
     font-size: 53px;
 }
 
@@ -100,7 +101,7 @@ span{
 
 #sectionDemo{
     background-color: #e8fce3;
-    background: repeating-linear-gradient( -45deg, #5df8912a, #77fd7d2a 4px, #e5f7ea44 4px, #e5f7f33a 50px ); 
+    background: repeating-linear-gradient( -45deg, #0000001f, #00000038 5px, #ffffff27 5px, #f7f7f73d 50px ); 
     /* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7ad 25px ), repeating-linear-gradient( #37c58344, #75c9a662 ); */
 }
 
