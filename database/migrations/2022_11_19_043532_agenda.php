@@ -20,8 +20,8 @@ class Agenda extends Migration
             $table->time('hora_agenda');
             $table->unsignedBigInteger('id_usuario');
             $table->unsignedBigInteger('id_servicio');
-            $table->foreign('id_usuario')->references('id')->on('users');
-            $table->foreign('id_servicio')->references('id')->on('servicios');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_servicio')->references('id')->on('servicios')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -34,5 +34,6 @@ class Agenda extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('agenda');
     }
 }

@@ -50,7 +50,7 @@ li {
 }
 
 li:hover{
-    background:rgb(0, 57, 59);
+    background:rgb(9, 58, 59);
     
 }
 
@@ -58,7 +58,7 @@ li:hover{
     border: 1px solid #5a5a5a;
     border-radius: 2px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.507);
+    background: rgba(255, 255, 255, 0.753);
 }
 
 #btn:hover {
@@ -66,7 +66,7 @@ li:hover{
 }
 
 #borderDemo {
-    outline: 1px dashed rgba(0,0,0,0.64);
+    outline: 5px dashed rgba(0,0,0,0.64);
     outline-offset: 0px;
 }
 
@@ -81,10 +81,25 @@ span{
 #textDemo{
     text-shadow: 4px 3px 0 #07e0e0, -40px -23px 0px rgba(206,89,55,0);
     color: #ffffff;
+    background-color: #179282;
     font-size: 50px;
     font-weight: bold;
 }
 
-#bottomDemo {
-    border-bottom: 6px dotted #000000;
+#textDemo:hover{
+    background: rgb(5, 167, 145);
+    font-size: 53px;
+}
+
+#textsubDemo{
+    text-shadow: 4px 3px 0 #bddddd, -40px -23px 0px rgba(206,89,55,0);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#sectionDemo{
+    background-color: #e8fce3;
+    background: repeating-linear-gradient( -45deg, #5df8912a, #77fd7d2a 4px, #e5f7ea44 4px, #e5f7f33a 50px ); 
+    /* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7ad 25px ), repeating-linear-gradient( #37c58344, #75c9a662 ); */
 }

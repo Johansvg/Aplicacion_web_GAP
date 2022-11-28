@@ -20,9 +20,9 @@ class Empleados extends Migration
             $table->string('telefono_empleado');
             $table->unsignedBigInteger('id_centro');
             $table->unsignedBigInteger('id_cargo');
-            $table->foreign('id_centro')->references('id')->on('centro');
-            $table->foreign('id_cargo')->references('id')->on('cargo');
             $table->timestamps();
+            $table->foreign('id_centro')->references('id')->on('centro')->onDelete('cascade');
+            $table->foreign('id_cargo')->references('id')->on('cargo')->onDelete('cascade');
         });
     }
 
@@ -34,5 +34,6 @@ class Empleados extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('empleados');
     }
 }

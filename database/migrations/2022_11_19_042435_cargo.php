@@ -19,6 +19,7 @@ class Cargo extends Migration
             $table->string('nombre_cargo');
             $table->string('descripcion_cargo');
             $table->timestamps();
+            
         });
     }
 
@@ -30,5 +31,6 @@ class Cargo extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('cargo');
     }
 }

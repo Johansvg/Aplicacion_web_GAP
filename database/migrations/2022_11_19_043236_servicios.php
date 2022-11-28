@@ -22,8 +22,8 @@ class Servicios extends Migration
             $table->string('precio_servicio');
             $table->unsignedBigInteger('id_centro');
             $table->unsignedBigInteger('id_empleado');
-            $table->foreign('id_centro')->references('id')->on('centro');
-            $table->foreign('id_empleado')->references('id')->on('empleados');
+            $table->foreign('id_centro')->references('id')->on('centro')->onDelete('cascade');
+            $table->foreign('id_empleado')->references('id')->on('empleados')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -36,5 +36,6 @@ class Servicios extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('servicios');
     }
 }

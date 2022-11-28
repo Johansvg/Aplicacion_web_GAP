@@ -19,8 +19,8 @@ class Almacen extends Migration
             $table->string('descripcion_almacen');
             $table->unsignedBigInteger('id_centro');
             $table->unsignedBigInteger('id_producto');
-            $table->foreign('id_centro')->references('id')->on('centro');
-            $table->foreign('id_producto')->references('id')->on('productos');
+            $table->foreign('id_centro')->references('id')->on('centro')->onDelete('cascade');
+            $table->foreign('id_producto')->references('id')->on('productos')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -33,5 +33,6 @@ class Almacen extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('almacen');
     }
 }
