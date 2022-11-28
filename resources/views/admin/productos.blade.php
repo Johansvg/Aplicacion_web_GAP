@@ -12,20 +12,23 @@
                 @csrf
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="nombre_producto" type="text" name="nombre_producto" class="validate">
-                        <label id="labels" for="nombre_producto">Nombre</label>
+                        <input id="nombre_producto" type="text" name="nombre_producto" class="validate" onchange="validarNombre()" onkeypress="validarNombre()" onfocusout="validarNombre()">
+                        <label id="label_nombre" for="nombre_producto">Nombre</label>
+                        <p id="nombre_error" class="text-center red-text">Nombre invalido</p>
                     </div>
                     <div class="input-field col s12">
-                        <input id="descripcion_producto" type="text" name="descripcion_producto" class="validate">
-                        <label id="labels" for="descripcion_producto">Descripción</label>
+                        <input id="descripcion_producto" type="text" name="descripcion_producto" class="validate" onchange="validarDescripcion()" onkeypress="validarDescripcion()" onfocusout="validarDescripcion()">
+                        <label id="label_descripcion" for="descripcion_producto">Descripción</label>
+                        <p id="descripcion_error" class="text-center red-text">Descripción invalida</p>
                     </div>
                     <div class="input-field col s12">
-                        <input id="precio_producto" type="text" name="precio_producto" class="validate">
-                        <label id="labels" for="precio_producto">Precio</label>
+                        <input id="precio_producto" type="number" name="precio_producto" class="validate" onchange="validarPrecio()" onkeypress="validarPrecio()" onfocusout="validarPrecio()">
+                        <label id="label_precio" for="precio_producto">Precio</label>
+                        <p id="precio_error" class="text-center red-text">Precio invalido</p>
                     </div>
                     <div class="col s12">
-                        <button type="submit" class="waves-effect cyan lighten-3 black-text btn "><i class="material-icons right">save</i>Guardar</button>
-                        <a class="btn waves-effect black-text red lighten-1"><i class="material-icons right">backspace</i>Limpiar</a>
+                        <button type="submit" class="waves-effect cyan lighten-3 black-text btn " id="boton_crear_producto"><i class="material-icons right" >save</i>Guardar</button>
+                        <a class="btn waves-effect black-text red lighten-1" onclick="limpiarCampos()"><i class="material-icons right">backspace</i>Limpiar</a>
                     </div>
                 </div>
             </form>
@@ -69,4 +72,5 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/productos.js') }}"></script>
 @endsection
