@@ -103,3 +103,15 @@ span{
     background: repeating-linear-gradient( -45deg, #5df8912a, #77fd7d2a 4px, #e5f7ea44 4px, #e5f7f33a 50px ); 
     /* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7ad 25px ), repeating-linear-gradient( #37c58344, #75c9a662 ); */
 }
+
+#rayoEfecto{
+    margin-top: 120px;
+    width: 150px;
+    height: 70%;
+}
+#rayoEfecto:hover{
+    margin-top: 120px;
+    width: 170px;
+    height: 70%;
+    animation: rayo 1s infinite;
+}

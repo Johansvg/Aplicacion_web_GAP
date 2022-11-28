@@ -26,11 +26,10 @@
     <div class="col s12 center" id="textDemo">PRODUCTOS</div>
     <div class="container" >
         <div class="row">
-            <div class="col s2 "> 
-                
-                
+            <div class="col s3">
+                <img src="{{asset("img/rayo.png")}}" id="rayoEfecto" />
             </div>
-            <div class="col s8">
+            <div class="col s6">
                 <div class="carousel">
                     <a class="carousel-item" href="#one!"><img src="{{asset("img/productos/base.jpg")}}"></a>
                     <a class="carousel-item" href="#two!"><img src="{{asset("img/productos/crema.jpg")}}"></a>
@@ -39,7 +38,12 @@
                     <a class="carousel-item" href="#five!"><img src="{{asset("img/productos/labial.jpg")}}"></a>
                 </div>
             </div>
-            <div class="col s2"></div>
+            <div class="col s3">
+                <img class="right"src="{{asset("img/rayo.png")}}" id="rayoEfecto" />
+            </div>
+            <div class="col s12 center">
+                <span id="textsubDemo" class="black-text">70% OFF</span>
+            </div>
         </div>
     </div>
 </div>
