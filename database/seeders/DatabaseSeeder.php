@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
 
         // crear cargo por defecto
         CargoModel::create([
-            'nombre_cargo' => 'Administrador',
+            'nombre_cargo' => 'Estilista',
             'descripcion_cargo' => 'Cargo de administrador',
         ]);
 
