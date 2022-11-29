@@ -44,7 +44,7 @@
                 </ul>
                     @else
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{{ route('login.index') }}">Iniciar</a></li>
+                        <li><a href="{{ route('login.index') }}">Inicio</a></li>
                         <li><a href="{{ route('register.index') }}">Registro</a></li>
                     </ul>
                 </div>
@@ -60,12 +60,12 @@
         <script src="{{ asset('js/mtz.js') }}" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
-    <footer class="page-footer teal darken-4">
+    <footer class="page-footer black">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h6 class="white-text">Gestor de agenda y productos</h6>
-                    <p class="grey-text text-lighten-4">Manizales, Caldas.<br>Universidad nacional sede Manizales</p>
+                    <h6 class="white-text">Estética</h6>
+                    <p class="grey-text text-lighten-4">Manizales, Caldas.<br></p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Redes</h5>

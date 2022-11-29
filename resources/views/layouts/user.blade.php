@@ -52,8 +52,8 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h6 class="white-text">Gestor de agenda y productos</h6>
-                <p class="grey-text text-lighten-4">Manizales, Caldas.<br>Universidad nacional sede Manizales</p>
+                <h6 class="white-text">Estética</h6>
+                <p class="grey-text text-lighten-4">Manizales, Caldas.<br></p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Redes</h5>

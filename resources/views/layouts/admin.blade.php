@@ -19,14 +19,14 @@
 </head>
 <body id="fondoAdmin">
     <nav class="nav-extended">
-        <div class="nav-wrapper teal" id="nav">
+        <div class="nav-wrapper" id="nav">
           <a href="#" class="brand-logo center"><img id="logo" src="{{asset("img/Gap_logo.png") }}" height="50" width="130"></a>
           <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="{{route("login.destroy")}}"><i class="material-icons right">exit_to_app</i>Salir</a></li>
           </ul>
         </div>
-        <div class="nav-wrapper teal lighten-1">
+        <div class="nav-wrapper black ">
           <ul>
             <li class="tab"><a href="{{route("productos.index")}}">Productos</a></li>
             <li class="tab"><a href="{{route("servicios.index")}}">Servicios</a></li>
@@ -47,12 +47,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
-<footer class="page-footer teal darken-4">
+<footer class="page-footer black">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h6 class="white-text">Gestor de agenda y productos</h6>
-                <p class="grey-text text-lighten-4">Manizales, Caldas.<br>Universidad nacional sede Manizales</p>
+                <h6 class="white-text">Estética</h6>
+                <p class="grey-text text-lighten-4">Manizales, Caldas.<br></p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Redes</h5>
