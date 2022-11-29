@@ -23,7 +23,6 @@
                 <label id="labels" for="password_confirmation" class="block">Password</label>
                 <input type="password" name="password_confirmation" id="password_confirmation">
             </div>
-            <p class="border border-red-500 rounded-md bg-red w-full text-red-600 p-2 my-2">*Error</p>
             <div class="center">
                 <button type="submit" class="btn  waves-effect waves-teal black-text" id="btn">
                     {{ __('Registrar') }}

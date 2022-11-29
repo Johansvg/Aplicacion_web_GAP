@@ -24,14 +24,16 @@
                     @method('PUT')
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="nombre_empleado" type="text" name="nombre_empleado" value="{{ $empleados->nombre_empleado }}">
-                            <label for="nombre">Nombre</label>
+                            <input id="nombre_empleado" type="text" name="nombre_empleado" value="{{ $empleados->nombre_empleado }}" class="validate" onchange="validarNombre()" onkeypress="validarNombre()" onfocusout="validarNombre()">
+                            <label id="label_nombre" for="nombre_empleado">Nombre</label>
+                            <p id="nombre_error" class="text-center red-text">Nombre invalido</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="telefono_empleado" type="text" name="telefono_empleado" value="{{ $empleados->telefono_empleado }}">
-                            <label for="telefono">Teléfono</label>
+                            <input id="telefono_empleado" type="number" name="telefono_empleado" value="{{ $empleados->telefono_empleado }}" class="validate" onchange="validarTelefono()" onkeypress="validarTelefono()" onfocusout="validarTelefono()">
+                            <label id="label_telefono" for="telefono_empleado">Teléfono</label>
+                            <p id="telefono_error" class="text-center red-text">Telefono invalido</p>
                         </div>
                     </div>
                     <div class="row">
@@ -74,6 +76,7 @@
         </div>
     </div>
     <script src="{{ asset('js/mtz.js') }}" defer></script>
+    <script src="{{ asset('js/empleados.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
