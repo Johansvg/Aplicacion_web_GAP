@@ -16,7 +16,7 @@
     <body id="fondoApp">
         <div id="app" class="col s12 m12 l12" >
             <nav class="nav-extended" >
-                <div class="nav-wrapper teal " id="nav">
+                <div class="nav-wrapper black" id="nav">
                     <a href="#" class="brand-logo center"><img id="logo" src="{{asset("img/Gap_logo.png") }}" height="45" width="120"></a>
                     <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     @if (auth()->check())                    
@@ -26,7 +26,7 @@
                     <a class="right">Bienvenido {{ auth()->user()->name }}</a>
                     
                 </div>
-                <div class="nav-wrapper teal lighten-1">
+                <div class="nav-wrapper black">
                     <ul>
                       <li class="tab"><a href="#agenda">Agenda</a></li>
                       <li class="tab"><a href="#productos">Productos</a></li>
@@ -44,7 +44,7 @@
                 </ul>
                     @else
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{{ route('login.index') }}">Iniciar</a></li>
+                        <li><a href="{{ route('login.index') }}">Inicio</a></li>
                         <li><a href="{{ route('register.index') }}">Registro</a></li>
                     </ul>
                 </div>
@@ -60,28 +60,27 @@
         <script src="{{ asset('js/mtz.js') }}" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
-    <footer class="page-footer teal darken-2">
+    <footer class="page-footer black">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h6 class="white-text">pie de pagina admin</h6>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    <h6 class="white-text">Estética</h6>
+                    <p class="grey-text text-lighten-4">Manizales, Caldas.<br></p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
+                    <h5 class="white-text">Redes</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2022 GAP 
+            <a class="grey-text text-lighten-4 right" href="#!">1.0</a>
             </div>
         </div>
     </footer>
-    
 </html>

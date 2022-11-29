@@ -1,14 +1,18 @@
 #fondoAdmin{
-    background: rgb(165,207,200);
-    background: radial-gradient(circle, rgba(165,207,200,1) 0%, rgba(231,242,239,1) 100%);
+    background: rgb(153, 153, 153);
+    background: radial-gradient(circle, rgb(202, 200, 178) 0%, rgb(242, 239, 231) 100%);
 
 }
 
 #fondoApp{
-    background: rgb(231,242,239);
-    background: radial-gradient(circle, rgba(231,242,239,1) 0%, rgba(165,207,200,1) 100%);
+    background: rgb(153, 153, 153);
+    background: radial-gradient(circle, rgb(202, 200, 178) 0%, rgb(242, 239, 231) 100%);
 }
 /* Path: public\css\css.css */
+#fondoLogin{
+    background: rgb(255, 255, 255);
+
+}
 
 #labels{
     color: #555555;
@@ -22,13 +26,13 @@
 }
 
 #fondoEditar{
-    background: rgb(232, 243, 240);
-    background: radial-gradient(circle, rgb(220, 236, 232) 0%, rgb(199, 209, 207) 54%);
+    background: rgb(153, 153, 153);
+    background: radial-gradient(circle, rgb(202, 200, 178) 0%, rgb(242, 239, 231) 100%);
 }
 
 #logo {
-    width: 90px;
-    height: 35px;
+    width: 58px;
+    height: 52px;
     margin-top: 10px;
     margin-left: 10px;
 
@@ -41,7 +45,8 @@
 
 #nav{
 
-    background: radial-gradient(circle, rgb(70, 184, 167) 0%, rgb(57, 155, 140) 70%);
+    background: radial-gradient(circle, rgb(14, 14, 0) 0%, rgb(0, 0, 0) 80%); 
+    
 
 }
 
@@ -50,15 +55,15 @@ li {
 }
 
 li:hover{
-    background:rgb(9, 58, 59);
+    background:rgba(155, 149, 98, 0.589);
     
 }
 
 #btn {
-    border: 1px solid #5a5a5a;
+    border: 1px solid #776f00;
     border-radius: 2px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.753);
+    background: rgba(254, 255, 214, 0.705);
 }
 
 #btn:hover {
@@ -81,25 +86,38 @@ span{
 #textDemo{
     text-shadow: 4px 3px 0 #07e0e0, -40px -23px 0px rgba(206,89,55,0);
     color: #ffffff;
-    background-color: #179282;
+    background-color: #000c0a;
     font-size: 50px;
     font-weight: bold;
 }
 
 #textDemo:hover{
-    background: rgb(5, 167, 145);
+    background: rgba(161, 148, 26, 0.671);
     font-size: 53px;
 }
 
 #textsubDemo{
-    text-shadow: 4px 3px 0 #bddddd, -40px -23px 0px rgba(206,89,55,0);
-    color: #ffffff;
+    text-shadow: 4px 3px 0 #36320d, -40px -2px 0px rgba(206,89,55,0);
+    color: #fffffb;
     font-size: 24px;
     font-weight: bold;
 }
 
 #sectionDemo{
     background-color: #e8fce3;
-    background: repeating-linear-gradient( -45deg, #5df8912a, #77fd7d2a 4px, #e5f7ea44 4px, #e5f7f33a 50px ); 
+    background: repeating-linear-gradient( -45deg, #c7c7c78e, #feffbd60 5px, rgba(255, 255, 255, 0.589) 5px, #ffffff85 50px ); 
     /* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7ad 25px ), repeating-linear-gradient( #37c58344, #75c9a662 ); */
 }
+
+#rayoEfecto{
+    margin-top: 120px;
+    width: 150px;
+    height: 70%;
+}
+#rayoEfecto:hover{
+    margin-top: 120px;
+    width: 170px;
+    height: 70%;
+    animation: rayo 1s infinite;
+}
+
