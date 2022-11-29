@@ -24,9 +24,10 @@
                     @method('PUT')
                     <div class="row">
                         <div class="input-field col s12">
-                            <input type="text" name="nombre_producto" id="nombre_producto" value="{{ $productos->nombre_producto }}" onchange="validarNombre()" onkeypress="validarNombre()" onfocusout="validarNombre()">
-                            <label for="nombre_producto" id="label_nombre">Nombre</label>
-                            <p id="nombre_error" class="text-center red-text">Nombre invalido</p>
+                            
+                            <input id="nombre_producto" type="text" name="nombre_producto" value="{{ $productos->nombre_producto }}" class="validate" onchange="validarNombre()" onkeypress="validarNombre()" onfocusout="validarNombre()">
+                        <label id="label_nombre" for="nombre_producto">Nombre</label>
+                        <p id="nombre_error" class="text-center red-text">Nombre invalido</p>
                         </div>
                     </div>
                     <div class="row">

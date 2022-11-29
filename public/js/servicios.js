@@ -2,7 +2,7 @@ const expreciones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
     precio: /^\d{1,14}(\.\d{1,2})?$/, // 7 a 14 numeros.
     descripcion: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    texto: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    texto: /^[A-Za-z0-9\s]+$/g, // Letras y espacios, pueden llevar acentos.
 }
 
 let boton = document.getElementById('boton_crear_servicio');
@@ -22,7 +22,7 @@ function validarCampos(){
     let precio = document.getElementById('precio_servicio');
     let tiempo = document.getElementById('tiempo_servicio');
     let boton = document.getElementById('boton_crear_servicio');
-    if(expreciones.nombre.test(nombre.value) && expreciones.descripcion.test(descripcion.value) && expreciones.precio.test(precio.value) && expreciones.tiempo.test(tiempo.value)){
+    if(expreciones.nombre.test(nombre.value) && expreciones.descripcion.test(descripcion.value) && expreciones.precio.test(precio.value) && expreciones.precio.test(tiempo.value)){
         boton.disabled = false;
     }else{
         boton.disabled = true;
@@ -97,4 +97,3 @@ function validarTiempo(){
     }
     validarCampos();
 }
-

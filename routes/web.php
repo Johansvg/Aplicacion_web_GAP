@@ -62,3 +62,6 @@ Route::resource('cargos', CargoController::class)
 
 Route::resource('empleados', EmpleadosController::class)
     ->middleware('auth.admin');
+
+Route::resource('agenda', AgendaController::class)
+    ->middleware('auth.admin');

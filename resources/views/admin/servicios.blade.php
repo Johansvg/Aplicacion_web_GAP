@@ -21,8 +21,8 @@
                     <p id="descripcion_error" class="text-center red-text">Descripción invalida</p>
                 </div>
                 <div class="input-field col s12">
-                    <input id="tiempo_servicio" type="text" name="tiempo_servicio" class="validate" onchange="validarTiempo()" onkeypress="validarTiempo()" onfocusout="validarTiempo()">
-                    <label id="label_tiempo" for="tiempo_servicio">Tiempo</label>
+                    <input id="tiempo_servicio" type="number" name="tiempo_servicio" class="validate" onchange="validarTiempo()" onkeypress="validarTiempo()" onfocusout="validarTiempo()">
+                    <label id="label_tiempo" for="tiempo_servicio">Tiempo (minutos)</label>
                     <p id="tiempo_error" class="text-center red-text">tiempo invalido</p>
                 </div>
                 <div class="input-field col s12">
@@ -34,7 +34,7 @@
                     <select class="input-field teal " name="centro">
                         <option value="" disabled selected name>Seleccione un centro</option>
                         @foreach ($centros as $centro)
-                            <option value="{{ $centro->id }}" name="centro">{{ $centro->nombre_centro }}</option>
+                            <option value="{{ $centro->id }}" name="centro" id="centro">{{ $centro->nombre_centro }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -43,14 +43,14 @@
                     <select class="input-field" name="empleado">
                         <option value="" disabled selected>Seleccione un empleado</option>
                         @foreach ($empleados as $empleado)
-                            <option value="{{ $empleado->id }}" name="empleado">{{ $empleado->nombre_empleado }}</option>
+                            <option value="{{ $empleado->id }}" name="empleado" id="empleado">{{ $empleado->nombre_empleado }}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="row"></div>
                 <div class="col s12">
                     <button type="submit" class="waves-effect cyan lighten-3  black-text btn " id="boton_crear_servicio"><i class="material-icons right">save</i>Guardar</button>
-                    <a  class="btn waves-effect black-text red lighten-1"><i class="material-icons right">backspace</i>Limpiar</a>
+                    <a  class="btn waves-effect black-text red lighten-1" onclick="limpiarCampos()"><i class="material-icons right">backspace</i>Limpiar</a>
                 </div>
             </form>
         </div>

@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
         ServiciosModel::create([
             'nombre_servicio' => 'Corte de cabello',
             'descripcion_servicio' => 'Corte de cabello',
-            'tiempo_servicio' => '1 hora',
+            'tiempo_servicio' => '60',
             'precio_servicio' => '15000',
             'id_centro' => 1,
             'id_empleado' => 1,

@@ -10,16 +10,18 @@
             <form action="{{ route('cargos.store') }}" method="POST">
                 @csrf
                 <div class="input-field col s12">
-                    <input id="nombre_cargo" type="text" name="nombre_cargo" class="validate">
-                    <label id="labels" for="nombre_cargo">Nombre</label>
+                    <input id="nombre_cargo" type="text" name="nombre_cargo" class="validate" onchange="validarNombre()" onkeypress="validarNombre()" onfocusout="validarNombre()">
+                    <label id="label_nombre" for="nombre_cargo">Nombre</label>
+                    <p id="nombre_error" class="text-center red-text">Nombre invalido</p>
                 </div>
                 <div class="input-field col s12">
-                    <input id="descripcion_cargo" type="text" name="descripcion_cargo" class="validate">
-                    <label id="labels" for="descripcion_cargo">Descripción</label>
+                    <input id="descripcion_cargo" type="text" name="descripcion_cargo" class="validate" onchange="validarDescripcion()" onkeypress="validarDescripcion()" onfocusout="validarDescripcion()">
+                    <label id="label_descripcion" for="descripcion_cargo">Descripción</label>
+                    <p id="descripcion_error" class="text-center red-text">Descripción invalida</p>
                 </div>
                 <div class="row"></div>
                 <div class="col s12">
-                    <button type="submit" class="waves-effect cyan lighten-3  black-text btn  "><i class="material-icons right">save</i>Guardar</button>
+                    <button type="submit" class="waves-effect cyan lighten-3  black-text btn " id="boton_crear_cargo"><i class="material-icons right">save</i>Guardar</button>
                     <a  class="btn waves-effect black-text red lighten-1"><i class="material-icons right">backspace</i>Limpiar</a>
                 </div>
             </form>
@@ -62,4 +64,5 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/cargo.js') }}"></script>
 @endsection

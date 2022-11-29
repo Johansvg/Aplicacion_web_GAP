@@ -24,25 +24,29 @@
                     @method('PUT')
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="nombre_servicio" type="text" name="nombre_servicio" value="{{ $servicios->nombre_servicio }}">
-                            <label for="nombre">Nombre</label>
+                            <input id="nombre_servicio" type="text" name="nombre_servicio" value="{{ $servicios->nombre_servicio }}" class="validate" onchange="validarNombre()" onkeypress="validarNombre()" onfocusout="validarNombre()">
+                            <label id="label_nombre" for="nombre_servicio">Nombre</label>
+                            <p id="nombre_error" class="text-center red-text">Nombre invalido</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="descripcion_servicio" type="text" name="descripcion_servicio" value="{{ $servicios->descripcion_servicio }}">
-                            <label for="descripcion">Descripción</label>
+                            <input id="descripcion_servicio" type="text"  name="descripcion_servicio" value="{{ $servicios->descripcion_servicio }}" class="validate" onchange="validarDescripcion()" onkeypress="validarDescripcion()" onfocusout="validarDescripcion()">
+                            <label id="label_descripcion" for="descripcion_servicio">Descripción</label>
+                            <p id="descripcion_error" class="text-center red-text">Descripción invalida</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="tiempo_servicio" type="text" name="tiempo_servicio" value="{{ $servicios->tiempo_servicio }}">
-                            <label for="precio">Tiempo</label>
+                            <input id="tiempo_servicio" type="number" name="tiempo_servicio" value="{{ $servicios->tiempo_servicio }}" class="validate" onchange="validarTiempo()" onkeypress="validarTiempo()" onfocusout="validarTiempo()">
+                            <label id="label_tiempo" for="tiempo_servicio">Tiempo (minutos)</label>
+                            <p id="tiempo_error" class="text-center red-text">tiempo invalido</p>
                         </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="precio_servicio" type="text" name="precio_servicio" value="{{ $servicios->precio_servicio }}">
-                            <label for="precio">Precio</label>
+                            <input id="precio_servicio" type="number" name="precio_servicio" value="{{ $servicios->precio_servicio }}" class="validate" onchange="validarPrecio()" onkeypress="validarPrecio()" onfocusout="validarPrecio()">
+                            <label id="label_precio" for="precio_servicio">Precio</label>
+                            <p id="precio_error" class="text-center red-text">precio invalido</p>
                         </div>
                     </div>
                     <div class="row">
@@ -76,7 +80,7 @@
                     </div>
                     <div class="row">
                         <div class="col s12">
-                            <button type="submit" class="waves-effect cyan lighten-3 black-text btn "><i class="material-icons right">save</i>Guardar</button>
+                            <button type="submit" class="waves-effect cyan lighten-3 black-text btn " id="boton_crear_servicio"><i class="material-icons right">save</i>Guardar</button>
                             <a href="{{ route('servicios.index') }}" class="btn waves-effect black-text red lighten-1"><i class="material-icons right">cancel</i>Cancelar</a>
                         </div>
                     </div>
@@ -86,6 +90,7 @@
         </div>
     </div>
     <script src="{{ asset('js/mtz.js') }}" defer></script>
+    <script src="{{ asset('js/servicios.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
