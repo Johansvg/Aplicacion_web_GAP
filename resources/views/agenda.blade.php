@@ -13,37 +13,47 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col s4">
-                <div id="textsubDemo">SELECCIONE FECHA</div>
-                <div class="input-field">
-                    <input type="text" class="datepicker" id="fecha">
-                    <label for="fecha">Fecha</label>
-                </div>
-                <div class="input-field ">
-                    <input type="text" class="timepicker" id="hora">
-                    <label for="hora">Hora</label>
-                </div>
-            </div>
-            <div class="col s8 center">
-                <div id="textsubDemo">SELECCIONE SERVICIO</div>
-                <div class="col s12">
-                    <div class="carousel">
-                        <a class="carousel-item" href="{{ route('seleccion', 2->id) }}"><img id="img" src="{{asset("img/servicios/manicure.webp")}}"><p id="textsubDemo" class="center black">Manicure</p></a>
-                        <a class="carousel-item" href="{{ route('seleccion', 1->id) }}"><img id="img" src="{{asset("img/servicios/corte_cabello.jpg")}}"><p id="textsubDemo" class="center black">Corte de cabello</p></a>
-                        <a class="carousel-item" href="{{ route('seleccion', 3->id)}}"><img id="img" src="{{asset("img/servicios/masaje.jpg")}}"><p id="textsubDemo" class="center black">Masaje</p></a>
+            <form action="{{ route('agenda.store') }}" method="POST">
+                @csrf
+                <div class="col s4">
+                    <div id="textsubDemo">SELECCIONE FECHA</div>
+                    <div class="input-field">
+                        <input type="text" class="datepicker" id="fecha" name="fecha">
+                        <label for="fecha">Fecha</label>
+                    </div>
+                    <div class="input-field ">
+                        <input type="text" class="timepicker" id="hora" name="hora">
+                        <label for="hora">Hora</label>
                     </div>
                 </div>
-            </div>                
+                <div class="col s8 center">
+                    <div id="textsubDemo">RESUMEN</div>
+                    <div class="col s12 center">
+                        <div class="input-field col s12">
+                            <input id="nombre_servicio" type="number" name="nombre_servicio" value="{{ $servicios->nombre_servicio }}" disabled>
+                            <label id="label_precio" for="nombre_servicio">Servicio</label>
+                        </div>
+                    </div>
+                    <div class="col s12 center">
+                        <div class="input-field col s12">
+                            <input id="nombre_centro" type="number" name="nombre_centro" value="{{ $centro->nombre_centro }}" disabled>
+                            <label id="label_precio" for="nombre_centro">Centro</label>
+                        </div>
+                    </div>
+                    <div class="col s12 center">
+                        <div class="input-field col s12">
+                            <input id="nombre_empleado" type="number" name="nombre_empleado" value="{{ $empleado->nombre_empleado }}" disabled>
+                            <label id="label_precio" for="nombre_empleado">Empleado</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <button type="submit" class="btn  waves-effect waves-teal black-text" id="btn">
+                        {{ __('Realizar reserva') }}
+                    </button>
+                </div> 
+           </form>
         </div>
-        {{-- <div class="row">
-            <br>
-            <div class="col s6 center">
-                <a href="{{route("agenda.index")}}" class=" btn pulse waves-effect btn-large waves-orange black-text" id="btn">Reservar</a>            
-            </div>
-            <div class="col s6 center" >
-                <a class=" btn pulse waves-effect btn-large waves-black black-text" id="btn">Mis citas</a>            
-            </div>
-        </div> --}}
     </div>
     <div class="col s12 center" id="textDemo"></div>
 </div>
