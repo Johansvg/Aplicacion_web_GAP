@@ -22,7 +22,7 @@
                 <div class="row"></div>
                 <div class="col s12">
                     <button type="submit" class="waves-effect cyan lighten-3  black-text btn " id="boton_crear_cargo"><i class="material-icons right">save</i>Guardar</button>
-                    <a  class="btn waves-effect black-text red lighten-1"><i class="material-icons right">backspace</i>Limpiar</a>
+                    <a  class="btn waves-effect black-text red lighten-1" onclick="limpiarCampos()"><i class="material-icons right">backspace</i>Limpiar</a>
                 </div>
             </form>
         </div>

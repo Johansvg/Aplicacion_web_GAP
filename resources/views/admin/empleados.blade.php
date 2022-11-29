@@ -10,12 +10,14 @@
             <form action="{{ route('empleados.store') }}" method="POST">
                 @csrf
                 <div class="input-field col s12">
-                    <input id="nombre_empleado" type="text" name="nombre_empleado" class="validate">
-                    <label id="labels" for="nombre_empleado">Nombre</label>
+                    <input id="nombre_empleado" type="text" name="nombre_empleado" class="validate" onchange="validarNombre()" onkeypress="validarNombre()" onfocusout="validarNombre()">
+                    <label id="label_nombre" for="nombre_empleado">Nombre</label>
+                    <p id="nombre_error" class="text-center red-text">Nombre invalido</p>
                 </div>
                 <div class="input-field col s12">
-                    <input id="telefono_empleado" type="text" name="telefono_empleado" class="validate">
-                    <label id="labels" for="telefono_empleado">Teléfono</label>
+                    <input id="telefono_empleado" type="number" name="telefono_empleado" class="validate" onchange="validarTelefono()" onkeypress="validarTelefono()" onfocusout="validarTelefono()">
+                    <label id="label_telefono" for="telefono_empleado">Teléfono</label>
+                    <p id="telefono_error" class="text-center red-text">Telefono invalido</p>
                 </div>
                 <div class="col s12">
                     <select class="input-field teal " name="centro">
@@ -35,8 +37,8 @@
                 </div>
                 <div class="row"></div>
                 <div class="col s12">
-                    <button type="submit" class="waves-effect cyan lighten-3  black-text btn  "><i class="material-icons right">save</i>Guardar</button>
-                    <a  class="btn waves-effect black-text red lighten-1"><i class="material-icons right">backspace</i>Limpiar</a>
+                    <button type="submit" class="waves-effect cyan lighten-3  black-text btn" id="boton_crear_empleado"><i class="material-icons right">save</i>Guardar</button>
+                    <a  class="btn waves-effect black-text red lighten-1" onclick="limpiarCampos()"><i class="material-icons right">backspace</i>Limpiar</a>
                 </div>
             </form>
         </div>
@@ -97,5 +99,6 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/empleados.js') }}"></script>
 @endsection
 
