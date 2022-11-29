@@ -1,11 +1,51 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-        </div>
+<nav>
+    <div class="nav-wrapper black">
+        <ul>
+          <li class="tab"><a href="{{route("login.index")}}">Inicio</a></li>
+        </ul>
     </div>
+</nav>
+<div class="section"  id="sectionDemo" >
+    <div class="col s12 center" id="textDemo">RESERVAS</div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col s4">
+                <div id="textsubDemo">SELECCIONE FECHA</div>
+                <div class="input-field">
+                    <input type="text" class="datepicker" id="fecha">
+                    <label for="fecha">Fecha</label>
+                </div>
+                <div class="input-field ">
+                    <input type="text" class="timepicker" id="hora">
+                    <label for="hora">Hora</label>
+                </div>
+            </div>
+            <div class="col s8 center">
+                <div id="textsubDemo">SELECCIONE SERVICIO</div>
+                <div class="col s12">
+                    <div class="carousel">
+                        <a class="carousel-item" href="{{ route('seleccion', 2->id) }}"><img id="img" src="{{asset("img/servicios/manicure.webp")}}"><p id="textsubDemo" class="center black">Manicure</p></a>
+                        <a class="carousel-item" href="{{ route('seleccion', 1->id) }}"><img id="img" src="{{asset("img/servicios/corte_cabello.jpg")}}"><p id="textsubDemo" class="center black">Corte de cabello</p></a>
+                        <a class="carousel-item" href="{{ route('seleccion', 3->id)}}"><img id="img" src="{{asset("img/servicios/masaje.jpg")}}"><p id="textsubDemo" class="center black">Masaje</p></a>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        {{-- <div class="row">
+            <br>
+            <div class="col s6 center">
+                <a href="{{route("agenda.index")}}" class=" btn pulse waves-effect btn-large waves-orange black-text" id="btn">Reservar</a>            
+            </div>
+            <div class="col s6 center" >
+                <a class=" btn pulse waves-effect btn-large waves-black black-text" id="btn">Mis citas</a>            
+            </div>
+        </div> --}}
+    </div>
+    <div class="col s12 center" id="textDemo"></div>
 </div>
 @endsection
 

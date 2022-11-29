@@ -4,7 +4,7 @@
 <nav>
     <div class="nav-wrapper black">
         <ul>
-          <li class="tab"><a href="#agenda">Agenda</a></li>
+          <li class="tab"><a href="#agenda">Citas</a></li>
           <li class="tab"><a href="#productos">Productos</a></li>
           <li class="tab"><a href="#tips">Tips</a></li>
           <li class="tab"><a href="#sobre nosotros">Sobre nosotros</a></li>
@@ -40,18 +40,18 @@
             </div>
             <div class="col s6">
                 <div class="carousel">
-                    <a class="carousel-item" href="#one!"><img src="{{asset("img/productos/base.jpg")}}"></a>
-                    <a class="carousel-item" href="#two!"><img src="{{asset("img/productos/crema.jpg")}}"></a>
-                    <a class="carousel-item" href="#three!"><img src="{{asset("img/productos/tinte.jpg")}}"></a>
-                    <a class="carousel-item" href="#four!"><img src="{{asset("img/productos/mask.jpg")}}"></a>
-                    <a class="carousel-item" href="#five!"><img src="{{asset("img/productos/labial.jpg")}}"></a>
+                    <a class="carousel-item" href="#one!"><img id="img" src="{{asset("img/productos/base.jpg")}}"><p id="textsubDemo" class="center teal" >$30.000</p></a>
+                    <a class="carousel-item" href="#two!"><img id="img" src="{{asset("img/productos/crema.jpg")}}"><p id="textsubDemo" class="center teal" >$60.000</p></a>
+                    <a class="carousel-item" href="#three!"><img id="img" src="{{asset("img/productos/tinte.jpg")}}"><p id="textsubDemo" class="center teal"  >$32.500</p></a>
+                    <a class="carousel-item" href="#four!"><img id="img" src="{{asset("img/productos/mask.jpg")}}"><p id="textsubDemo" class="center teal" >$10.000</p></a>
+                    <a class="carousel-item" href="#five!"><img id="img" src="{{asset("img/productos/labial.jpg")}}"><p id="textsubDemo" class="center teal" >$25.000</p></a>
                 </div>
             </div>
             <div class="col s3">
                 <img class="right"src="{{asset("img/rayo.png")}}" id="rayoEfecto" />
             </div>
             <div class="col s12 center">
-                <span id="textsubDemo" class="black-text">70% OFF</span>
+                <p id="textsubDemo" >70% OFF</p>
             </div>
         </div>
     </div>

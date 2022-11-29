@@ -103,3 +103,8 @@ li:hover{
     animation: rayo 1s infinite;
 }
 
+#img{
+    width: 250px;
+    height: 200px;
+    display: block;
+}
