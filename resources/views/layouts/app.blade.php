@@ -26,14 +26,6 @@
                     <a class="right">Bienvenido {{ auth()->user()->name }}</a>
                     
                 </div>
-                <div class="nav-wrapper black">
-                    <ul>
-                      <li class="tab"><a href="#agenda">Agenda</a></li>
-                      <li class="tab"><a href="#productos">Productos</a></li>
-                      <li class="tab"><a href="#tips">Tips</a></li>
-                      <li class="tab"><a href="#sobre nosotros">Sobre nosotros</a></li>
-                    </ul>
-                </div>
                 <ul class="sidenav" id="mobile-demo">
                     
                     <li class="tab"><a href="#agenda">Agenda</a></li>

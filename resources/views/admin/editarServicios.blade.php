@@ -60,7 +60,6 @@
                                         <option value="{{ $centro->id }}" name="centro">{{ $centro->nombre_centro }}</option>
                                     @endif
                                 @endforeach
-                                
                             </select>
                         </div>
                     </div>

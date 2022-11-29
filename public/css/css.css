@@ -14,17 +14,6 @@
 
 }
 
-#labels{
-    color: #555555;
-    font-size: 15px;
-
-}
-#labels:hover{
-    color: #000000;
-    font-size: 15px;
-    text-decoration: none;
-}
-
 #fondoEditar{
     background: rgb(153, 153, 153);
     background: radial-gradient(circle, rgb(202, 200, 178) 0%, rgb(242, 239, 231) 100%);
@@ -75,13 +64,6 @@ li:hover{
     outline-offset: 0px;
 }
 
-span{
-    font-style: sans-serif;
-    font-size: 30px;
-    color: #001f1f;
-    font-weight: bold;
-    
-}
 
 #textDemo{
     text-shadow: 4px 3px 0 #07e0e0, -40px -23px 0px rgba(206,89,55,0);

@@ -31,8 +31,8 @@
                     <p id="precio_error" class="text-center red-text">precio invalido</p>
                 </div>
                 <div class="col s12">
-                    <select class="input-field teal " name="centro">
-                        <option value="" disabled selected name>Seleccione un centro</option>
+                    <select class="input-field" name="centro">
+                        <option value="" disabled selected>Seleccione un centro</option>
                         @foreach ($centros as $centro)
                             <option value="{{ $centro->id }}" name="centro" id="centro">{{ $centro->nombre_centro }}</option>
                         @endforeach

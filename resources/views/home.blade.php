@@ -1,7 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-
+<nav>
+    <div class="nav-wrapper black">
+        <ul>
+          <li class="tab"><a href="#agenda">Agenda</a></li>
+          <li class="tab"><a href="#productos">Productos</a></li>
+          <li class="tab"><a href="#tips">Tips</a></li>
+          <li class="tab"><a href="#sobre nosotros">Sobre nosotros</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="parallax-container">
     <div class="parallax"><img src="{{asset("img/centro_estetica2.jpg")}}"></div>
 </div>
@@ -13,7 +22,7 @@
         <div class="row">
             <br>
             <div class="col s6 center">
-                <a class=" btn pulse waves-effect btn-large waves-orange  black-text" id="btn">Reservar</a>            
+                <a href="{{route("agenda.index")}}" class=" btn pulse waves-effect btn-large waves-orange black-text" id="btn">Reservar</a>            
             </div>
             <div class="col s6 center" >
                 <a class=" btn pulse waves-effect btn-large waves-black black-text" id="btn">Mis citas</a>            

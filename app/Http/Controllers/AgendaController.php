@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Agenda;
 use Illuminate\Http\Request;
 use App\Models\AgendaModel;
-use App\Models\UsuarioModel;
+use App\Models\User;
 use App\Models\ServiciosModel;
-use App\Models\Model;
+use App\Models\CentroModel;
+Use App\Models\EmpleadosModel;
 
 class AgendaController extends Controller
 {
@@ -19,7 +21,11 @@ class AgendaController extends Controller
     {
         //
         $agenda = AgendaModel::all();
-        return $agenda;
+        $usuarios = User::all();
+        $servicios = ServiciosModel::all();
+        $centros = CentroModel::all();
+        $empleados = EmpleadosModel::all();
+        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -29,10 +35,13 @@ class AgendaController extends Controller
      */
     public function create()
     {
-        //
-        // $usuarios = UsuarioModel::all();
+        // //
+        // $agenda = AgendaModel::all();
+        // $usuarios = User::all();
         // $servicios = ServiciosModel::all();
-        // return view('agenda.create', compact('usuarios', 'servicios'));
+        // $centros = CentroModel::all();
+        // $empleados = EmpleadosModel::all();
+        // // return view('agenda.index', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -51,8 +60,12 @@ class AgendaController extends Controller
         $agenda->id_servicio = $request->id_servicio;
         $agenda->save();
 
+        $usuarios = User::all();
+        $servicios = ServiciosModel::all();
         $agenda = AgendaModel::all();
-        return $agenda;
+        $centros = CentroModel::all();
+        $empleados = EmpleadosModel::all();
+        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -65,7 +78,11 @@ class AgendaController extends Controller
     {
         //
         $agenda = AgendaModel::find($id);
-        return $agenda;
+        $usuarios = User::all();
+        $servicios = ServiciosModel::all();
+        $centros = CentroModel::all();
+        $empleados = EmpleadosModel::all();
+        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -77,9 +94,12 @@ class AgendaController extends Controller
     public function edit($id)
     {
         //
-        // $usuarios = UsuarioModel::all();
-        // $servicios = ServiciosModel::all();
-        // return view('agenda.edit', compact('usuarios', 'servicios'));
+        $agenda = AgendaModel::find($id);
+        $usuarios = User::all();
+        $servicios = ServiciosModel::all();
+        $centros = CentroModel::all();
+        $empleados = EmpleadosModel::all();
+        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -99,8 +119,12 @@ class AgendaController extends Controller
         $agenda->id_servicio = $request->id_servicio;
         $agenda->save();
 
+        $usuarios = User::all();
+        $servicios = ServiciosModel::all();
         $agenda = AgendaModel::all();
-        return $agenda;
+        $centros = CentroModel::all();
+        $empleados = EmpleadosModel::all();
+        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -115,7 +139,11 @@ class AgendaController extends Controller
         $agenda = AgendaModel::find($id);
         $agenda->delete();
 
+        $usuarios = User::all();
+        $servicios = ServiciosModel::all();
         $agenda = AgendaModel::all();
-        return $agenda;
+        $centros = CentroModel::all();
+        $empleados = EmpleadosModel::all();
+        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 }
