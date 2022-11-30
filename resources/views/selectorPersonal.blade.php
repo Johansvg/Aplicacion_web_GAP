@@ -13,6 +13,17 @@
     <br>
     <div class="container">
         <div class="row">
+            <div class="col s4">
+                <div id="textsubDemo" class="black center">SELECCIONE FECHA</div>
+                <div class="input-field">
+                    <input type="text" class="datepicker" id="fecha" name="fecha">
+                    <label for="fecha">Fecha</label>
+                </div>
+                <div class="input-field ">
+                    <input type="text" class="timepicker" id="hora" name="hora">
+                    <label for="hora">Hora</label>
+                </div>
+            </div>
             <div class="col s12 center">
                 <div id="textsubDemo" class="black">SELECCIONE PERSONAL DISPONIBLE</div>
                 <table class="responsive-table highlight">
@@ -28,7 +39,7 @@
                             <tr>
                                 <td>{{ $empleado->nombre_empleado }}</td>
                                 <td class="center">{{ $empleado->telefono_empleado }}</td>
-                                <td class="right"><a href="{{ route('agenda.edit', $empleado->id) }}" class="btn pulse waves-effect waves-yellow   black-text" id="btn">Terminar</a>
+                                <td class="right"><a href="{{ route('login.index', $empleado->id) }}" class="btn pulse waves-effect waves-yellow   black-text" id="btn">Terminar</a>
                                 </td>
                             </tr>
                             @endif
