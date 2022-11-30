@@ -17,7 +17,7 @@
                 <div class="col s3">
                     <div class="card">
                         <div class="card-image">
-                            <img class="activator" id="img" src="{{asset("img/productos/base.jpg")}}">
+                            <img class="activator" id="img" src="{{asset("img/productos/base.jpg")}}" alt="Imagen de un Shampoo">
                         </div>
                         <div class="card-content">
                             <span class="card-title center activator grey-text text-darken-4">{{$producto->nombre_producto}}<i class="material-icons right">more_vert</i></span>    
