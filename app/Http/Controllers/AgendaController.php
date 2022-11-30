@@ -20,12 +20,12 @@ class AgendaController extends Controller
     public function index()
     {
         //
-        $agenda = AgendaModel::all();
-        $usuarios = User::all();
-        $servicios = ServiciosModel::all();
-        $centros = CentroModel::all();
-        $empleados = EmpleadosModel::all();
-        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
+        // $agenda = AgendaModel::all();
+        // $usuarios = User::all();
+        // $servicios = ServiciosModel::all();
+        // $centros = CentroModel::all();
+        // $empleados = EmpleadosModel::all();
+        // return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -53,19 +53,19 @@ class AgendaController extends Controller
     public function store(Request $request)
     {
         //
-        $agenda = new AgendaModel();
-        $agenda->fecha_agenda = $request->fecha_agenda;
-        $agenda->hora_agenda = $request->hora_agenda;
-        $agenda->id_usuario = $request->id_usuario;
-        $agenda->id_servicio = $request->id_servicio;
-        $agenda->save();
+        // $agenda = new AgendaModel();
+        // $agenda->fecha_agenda = $request->fecha_agenda;
+        // $agenda->hora_agenda = $request->hora_agenda;
+        // $agenda->id_usuario = $request->id_usuario;
+        // $agenda->id_servicio = $request->id_servicio;
+        // $agenda->save();
 
-        $usuarios = User::all();
-        $servicios = ServiciosModel::all();
-        $agenda = AgendaModel::all();
-        $centros = CentroModel::all();
-        $empleados = EmpleadosModel::all();
-        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
+        // $usuarios = User::all();
+        // $servicios = ServiciosModel::all();
+        // $agenda = AgendaModel::all();
+        // $centros = CentroModel::all();
+        // $empleados = EmpleadosModel::all();
+        // return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**
@@ -77,12 +77,12 @@ class AgendaController extends Controller
     public function show($id)
     {
         //
-        $agenda = AgendaModel::find($id);
-        $usuarios = User::all();
-        $servicios = ServiciosModel::all();
-        $centros = CentroModel::all();
-        $empleados = EmpleadosModel::all();
-        return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
+        // $agenda = AgendaModel::find($id);
+        // $usuarios = User::all();
+        // $servicios = ServiciosModel::all();
+        // $centros = CentroModel::all();
+        // $empleados = EmpleadosModel::all();
+        // return view('agenda', compact('agenda', 'usuarios', 'servicios', 'centros', 'empleados'));
     }
 
     /**

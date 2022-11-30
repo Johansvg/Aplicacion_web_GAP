@@ -12,6 +12,10 @@ use App\Http\Controllers\CentroController;
 use App\Http\Controllers\EmpleadosController;
 use App\Http\Controllers\PedidosController;
 use App\Http\Controllers\ServiciosController;
+use App\Http\Controllers\SelectorServiciosController;
+use App\Http\Controllers\SelectorCentroController;
+use App\Http\Controllers\SelectorPersonalController;
+use App\Http\Controllers\ProductosUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +69,17 @@ Route::resource('empleados', EmpleadosController::class)
 
 Route::resource('agenda', AgendaController::class)
     ->middleware('auth');
+
+Route::resource('selectorServicios', SelectorServiciosController::class)
+    ->middleware('auth');
+
+Route::resource('selectorCentros', SelectorCentroController::class)
+    ->middleware('auth');
+
+Route::resource('selectorPersonal', SelectorPersonalController::class)
+    ->middleware('auth');
+
+Route::resource('productosUser', ProductosUserController::class)
+    ->middleware('auth');
+
+    

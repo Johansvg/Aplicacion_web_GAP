@@ -22,7 +22,7 @@
         <div class="row">
             <br>
             <div class="col s6 center">
-                <a href="{{route("agenda.index")}}" class=" btn pulse waves-effect btn-large waves-orange black-text" id="btn">Reservar</a>            
+                <a href="{{route("selectorServicios.index")}}" class=" btn pulse waves-effect btn-large waves-orange black-text" id="btn">Reservar</a>            
             </div>
             <div class="col s6 center" >
                 <a class=" btn pulse waves-effect btn-large waves-black black-text" id="btn">Mis citas</a>            
@@ -40,11 +40,11 @@
             </div>
             <div class="col s6">
                 <div class="carousel">
-                    <a class="carousel-item" href="#one!"><img id="img" src="{{asset("img/productos/base.jpg")}}"><p id="textsubDemo" class="center teal" >$30.000</p></a>
-                    <a class="carousel-item" href="#two!"><img id="img" src="{{asset("img/productos/crema.jpg")}}"><p id="textsubDemo" class="center teal" >$60.000</p></a>
-                    <a class="carousel-item" href="#three!"><img id="img" src="{{asset("img/productos/tinte.jpg")}}"><p id="textsubDemo" class="center teal"  >$32.500</p></a>
-                    <a class="carousel-item" href="#four!"><img id="img" src="{{asset("img/productos/mask.jpg")}}"><p id="textsubDemo" class="center teal" >$10.000</p></a>
-                    <a class="carousel-item" href="#five!"><img id="img" src="{{asset("img/productos/labial.jpg")}}"><p id="textsubDemo" class="center teal" >$25.000</p></a>
+                    <a class="carousel-item" href="{{route("productosUser.index")}}"><img id="img" src="{{asset("img/productos/base.jpg")}}"><p id="textsubDemo" class="center teal" >$30.000</p></a>
+                    <a class="carousel-item" href="{{route("productosUser.index")}}"><img id="img" src="{{asset("img/productos/crema.jpg")}}"><p id="textsubDemo" class="center teal" >$60.000</p></a>
+                    <a class="carousel-item" href="{{route("productosUser.index")}}"><img id="img" src="{{asset("img/productos/tinte.jpg")}}"><p id="textsubDemo" class="center teal"  >$32.500</p></a>
+                    <a class="carousel-item" href="{{route("productosUser.index")}}"><img id="img" src="{{asset("img/productos/mask.jpg")}}"><p id="textsubDemo" class="center teal" >$10.000</p></a>
+                    <a class="carousel-item" href="{{route("productosUser.index")}}"><img id="img" src="{{asset("img/productos/labial.jpg")}}"><p id="textsubDemo" class="center teal" >$25.000</p></a>
                 </div>
             </div>
             <div class="col s3">
