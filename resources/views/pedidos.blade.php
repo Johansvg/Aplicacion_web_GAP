@@ -36,7 +36,7 @@
             </table>    
         </div>
         <div class="col s12 center">
-            <p id="textsubDemo" class="black center">Total: </a></p>
+            <p id="textsubDemo" class="black center">Total: 35000</a></p>
         </div>
     </div>
 </div>
