@@ -17,6 +17,7 @@ use App\Http\Controllers\SelectorCentroController;
 use App\Http\Controllers\SelectorPersonalController;
 use App\Http\Controllers\ProductosUserController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,6 +81,10 @@ Route::resource('selectorPersonal', SelectorPersonalController::class)
     ->middleware('auth');
 
 Route::resource('productosUser', ProductosUserController::class)
+    ->middleware('auth');
+
+    
+Route::resource("pedidos", PedidosController::class)
     ->middleware('auth');
 
     

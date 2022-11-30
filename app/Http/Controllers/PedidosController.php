@@ -17,8 +17,8 @@ class PedidosController extends Controller
     public function index()
     {
         //
-        $pedidos = PedidosModel::all();
-        return view('Pedidos.index', compact('pedidos'));
+        $productos = productoModelo::all();
+        return view('pedidos', compact('productos'));
     }
 
     /**
