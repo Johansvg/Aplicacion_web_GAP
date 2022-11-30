@@ -68,8 +68,6 @@ class SelectorPersonalController extends Controller
         $servicios = ServiciosModel::where('id_centro', $id)->get();
         $empleados = EmpleadosModel::all();
         return view('selectorPersonal', compact('centros', 'empleados', 'servicios'));
-        
-
     }
 
     /**
