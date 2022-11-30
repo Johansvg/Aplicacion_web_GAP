@@ -80,6 +80,15 @@ Route::resource('selectorCentros', SelectorCentroController::class)
 Route::resource('selectorPersonal', SelectorPersonalController::class)
     ->middleware('auth');
 
+// Route::get('selectorPersonal', ['id' => 'SelectorPersonalController@editar',
+//                                 'as' => 'selectorPersonal.editar'])
+//     ->name('personal')
+//     ->middleware('auth');
+// ejemplo de internet: (para pasar varios parametros a traves de una ruta)
+// Route::get('k_calificacion/{id}/{idk}/asignar', [
+//     'uses' => 'K_calificacionController@asignar',
+//     'as'=>'k_calificacion.asignar']);
+
 Route::resource('productosUser', ProductosUserController::class)
     ->middleware('auth');
 
